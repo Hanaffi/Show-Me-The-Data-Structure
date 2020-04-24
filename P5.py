@@ -56,3 +56,45 @@ print("Block Zero timestamp : ", block_zero.timestamp)
 print("Block one's previous block's data : ", block_one.previous_hash.data)
 print("Linked list last data : ", linked_list.last.data)
 print("Linked list last's previous hash data : ", linked_list.last.previous_hash.data)
+
+
+
+
+
+
+# TEST 2
+block_zero = Block(get_timestamp(), "Information A", 0)
+block_one = Block(get_timestamp(), "Information B", block_zero)
+block_two = Block(get_timestamp(), "Information C", block_one)
+block_three = Block(get_timestamp(), "Information C", block_two)
+linked_list1 = LinkedList()
+linked_list1.append(get_timestamp(), "Information X")
+linked_list1.append(get_timestamp(), "Information Y")
+linked_list1.append(get_timestamp(), "Information Z")
+
+print("Block Zero data : ", block_zero.data)
+print("Linked list last's previous hash data : ", linked_list1.last.previous_hash.data)
+
+# TEST 3
+
+block_zero = Block(get_timestamp(), "Information A", 0)
+block_one = Block(get_timestamp(), "Information B", block_zero)
+block_two = Block(get_timestamp(), "Information C", block_one)
+block_three = Block(get_timestamp(), "Information D", block_two)
+block_four = Block(get_timestamp(), "Information D", block_two)
+
+
+linked_list2 = LinkedList()
+linked_list2.append(get_timestamp(), "Information X")
+linked_list2.append(get_timestamp(), "Information Y")
+linked_list2.append(get_timestamp(), "Information Z")
+linked_list2.append(get_timestamp(), "Information T")
+
+print("Block Zero data : ", block_zero.data)
+print("Linked list last's previous hash data : ", linked_list2.last.previous_hash.data)
+
+
+
+
+
+

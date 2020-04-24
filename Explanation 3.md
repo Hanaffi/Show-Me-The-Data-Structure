@@ -6,7 +6,7 @@ The Priority Queue, along with Node having a frequency parameter, allowed me to 
 
 
 ***Time** Complexity:*
-_O_(_n_) since I constantly run through the initial data when determining frequencies, building the priority queue, building the tree, creating the compressed data, and decompressing the data
+O(nlogn) since I constantly run through the initial data when determining frequencies, building the priority queue, building the tree, creating the compressed data, and decompressing the data
 
 ***Space** Complexity:*
 _O_(_n_) from storing the binary codes, priority queue, frequencies.

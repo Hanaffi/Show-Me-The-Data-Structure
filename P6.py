@@ -63,24 +63,24 @@ def union(llist_1, llist_2):
     return u_list
     pass
 
-def intersection(llist_1, llist_2):
-    # Your Solution Here
-    intersection_lst = LinkedList()
-    node1 = llist_1.head
-    tmp_lst = []
-    while node1 != None:
-        node2 = llist_2.head
-        while node2 != None:
-            if node1.value == node2.value:
-                if node1.value not in tmp_lst:
-                    tmp_lst.append(node1.value)
-                    #print(node1.value, node2.value)
-            node2 = node2.next
-        node1 = node1.next
-    for i in tmp_lst:
-        intersection_lst.append(i)
-    return intersection_lst 
 
+def intersection(llist_1, llist_2):
+    l1 = set()
+    current = llist_1.head
+    while current:
+        l1.add(current.value)
+        current = current.next
+    l2 = set()
+    current = llist_2.head
+    while current:
+        l2.add(current.value)
+        current = current.next
+
+    l = l1.intersection(l2)
+    result = LinkedList()
+    for num in l:
+        result.append(num)
+    return result
 
 # Test case 1
 
